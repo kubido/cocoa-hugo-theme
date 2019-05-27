@@ -411,6 +411,7 @@ section.main .content .front-matter .meta {
   display: -ms-flex;
   display: flex;
   margin-bottom: 32px;
+  position: relative;
 }
 section.main .content .front-matter .date,
 section.main .content .front-matter .word-count,
@@ -781,4 +782,9 @@ section.comments{
 
 .pagination li.active a{
   color: #ca4b16
+}
+
+.right-alignment{
+  position: absolute;
+  right: 0;
 }
