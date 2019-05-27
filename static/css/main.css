@@ -724,3 +724,27 @@ section.main .content .markdown tbody tr:nth-child(odd) td,
 section.main .content .markdown tbody tr:nth-child(odd) th {
   background-color: #f7f7f7;
 }
+
+section.comments{
+  order: 2
+}
+
+.footnotes{
+  font-size: 11px;  
+}
+.footnotes li{
+  margin-bottom: 10px
+}
+
+.pagination{
+  margin-top: 4em;
+  text-align: center
+}
+.pagination li{
+  display: inline-block;
+  margin: 0 10px
+}
+
+.pagination li.active a{
+  color: #ca4b16
+}

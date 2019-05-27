@@ -12,16 +12,15 @@
             {{ if gt $latestpostscount 0 }}
                 <div class="page-heading">{{ i18n "latestPosts" }}</div>
                 <ul>
-                    {{ range (first $latestpostscount (where .Data.Pages.ByPublishDate.Reverse "Section" "blog")) }}
+                   
+
+                    {{ $paginator := .Paginate (where .Data.Pages.ByPublishDate.Reverse "Section" "blog") .Site.Params.latestpostscount }}
+                    {{ range $paginator.Pages }}
                         {{ partial "li.html" . }}
                     {{ end }}
-                    {{ if gt $totalpostscount $latestpostscount }}
-                        {{ range where .Site.Menus.main "Identifier" "blog" }}
-                            <li class="post-item no-bullet">
-                                <a id="see-more" {{ printf "href=%q " .URL | safeHTMLAttr }}><span>See more&hellip;</span></a>
-                            </li>
-                        {{ end }}
-                    {{ end }}
+
+                    {{ template "_internal/pagination.html" . }}
+
                 </ul>
             {{ end }}
         </div>
