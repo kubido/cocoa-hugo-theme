@@ -56,6 +56,7 @@ body {
   min-height: 100%;
   font-weight: 400;
   font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   color: #111;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
@@ -98,6 +99,22 @@ section {
 .container .content {
   width: 100%;
 }
+
+.container .content .profile{
+  display: flex;
+  flex-direction: row;
+  width: 100%
+}
+
+.container .content .profile{
+  border-bottom: 1px solid #c2c2c2;
+  margin-bottom: 1rem;
+}
+.container .content .profile .avatar{
+  height: 50px;
+  margin-right: 1.5em
+}
+
 @media (min-width: 600px) {
   section {
     padding: 0 16px;
@@ -135,7 +152,7 @@ section.main {
     -webkit-order: 2;
     -moz-order: 2;
     -ms-order: 2;
-    order: 2;
+    order: 3;
   }
   section.main {
     -webkit-order: 1;
@@ -180,6 +197,7 @@ section.header .avatar {
 section.header .name {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   letter-spacing: -0.005rem;
   font-weight: 700;
   color: #333;
@@ -190,6 +208,7 @@ section.header h3.self-intro {
   font-size: 1em;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
   letter-spacing: -0.005rem;
+  font-display: auto;
   font-weight: 700;
   color: #333;
   font-weight: 400;
@@ -201,6 +220,7 @@ section.header nav {
   margin-bottom: 16px;
   text-transform: uppercase;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
 }
 section.header nav ul {
   list-style: none;
@@ -212,8 +232,8 @@ section.header nav ul {
   display: inline-flex;
 }
 section.header nav ul li {
-  margin-left: 6px;
-  margin-right: 6px;
+  /* margin-left: 6px; */
+  margin-right: 20px;
 }
 section.header nav ul li:first-child {
   margin-left: 0;
@@ -352,6 +372,7 @@ section.main .content .title-container .initials {
   display: none;
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   letter-spacing: -0.005rem;
   font-weight: 700;
   color: #333;
@@ -372,6 +393,7 @@ section.main .content .title-container .initials a:hover {
 section.main .content .page-heading {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   letter-spacing: -0.005rem;
   font-weight: 700;
   color: #333;
@@ -439,6 +461,7 @@ section.main .container.f04 .content .num {
   margin: 30px 0px 30px 0;
   font-weight: 200;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   font-size: 50px;
 }
 section.main .container.f04 .content .detail {
@@ -476,15 +499,22 @@ section.main .container .content .post-item {
   -ms-align-items: center;
   align-items: center;
   display: list-item;
-  list-style: disc inside;
+  list-style: none;
+  margin-bottom: 1em
 }
 section.main .container .content .post-item .meta {
   color: #666;
-  display: none;
+  display: flex;
+  align-self: baseline;
   min-width: 100px;
   text-align: right;
-  margin-right: 16px;
+  margin-right: 16px;  
 }
+section.main .container .content .post-item a{
+  display: flex;
+  align-self: baseline;
+}
+ 
 section.main .container .content .no-bullet {
   color: transparent;
   font-style: oblique;
@@ -494,6 +524,7 @@ section.main .container .content .no-bullet {
 section.main .container .content .no-bullet .date {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   letter-spacing: -0.005rem;
   font-weight: 700;
   color: #333;
@@ -540,7 +571,8 @@ section.main {
   }
   section.main.post {
     padding-top: 60px;
-    padding-bottom: 60px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
   }
 }
 a {
@@ -577,6 +609,7 @@ section.main .content .markdown h5,
 section.main .content .markdown h6 {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-display: auto;
   letter-spacing: -0.005rem;
   font-weight: 700;
   color: #333;
@@ -605,6 +638,7 @@ section.main .content .markdown h6 {
 section.main .content .markdown code,
 section.main .content .markdown pre {
   font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-display: auto;
   font-size: 1rem;
   background-color: #f7f7f7;
 }
