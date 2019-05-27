@@ -12,6 +12,7 @@ pygmentsuseclasses  = true
 disqusshortname     = "cocoaexamplesite" # Comment out to disable Disqus.
 pluralizelisttitles = false
 googleAnalytics     = "UA-123-45"
+facebookAppId       = "77686921602xx"
 
 [permalinks]
 blog  = "blog/:slug/"
