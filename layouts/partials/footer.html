@@ -1,4 +1,16 @@
-{{ partial "footer_scripts" . }}
+{{ partial "footer_scripts" . }}  
+{{ $gA := .Site.Params.googleAnalytics }}
+{{ if $gA }}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ $gA }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', {{ $gA }});
+  </script>
+{{ end }}
 
 </body>
 </html>
