@@ -1,9 +1,10 @@
 {{ partial "header.html" . }}
 
-<section class="main post non-narrow zero-top-spacing">
+<section class="main post non-narrow zero-top-spacing">        
     <div class="container">
         <div class="content">
             <div class="front-matter">
+                
                 <div class="title-container">
                     {{ partial "page-heading" . }}
                     <div class="initials"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Initials }}</a></div>
@@ -15,7 +16,15 @@
                     <div class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>{{ .Date.Format "Jan 2, 2006" }}</div>
                     {{ end }}
                     {{ if not .Site.Params.noshowreadtime }}
-		    <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
+		    <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }} </div>
+                    {{ end }}
+                    {{ if .Site.Params.facebookAppId }}
+                        <div class="right-alignment">
+                            <div class="fb-share-button" 
+                                data-href="{{ .Permalink }}" 
+                                data-layout="button_count">
+                            </div>
+                        </div>
                     {{ end }}
                 </div>
             </div>
